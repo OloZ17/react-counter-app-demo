@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Navbar() Component should take a snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="navbar navbar-light"
+  >
+    <div
+      class="navbar-brand"
+    >
+      <i
+        aria-hidden="true"
+        class="fa fa-shopping-cart fa-lg m-2"
+      />
+      <span
+        class="badge badge-pill bg-info m-2"
+        style="width: 50px; font-size: 24px;"
+      >
+        10
+      </span>
+      Items
+    </div>
+  </nav>
+</DocumentFragment>
+`;
