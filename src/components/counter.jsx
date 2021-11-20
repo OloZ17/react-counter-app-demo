@@ -25,12 +25,14 @@ const Counter = (props) => {
             {formatCount()}
           </span>
           <button
+            data-testid="increment-button"
             className="btn btn-secondary"
             onClick={() => onIncrement(counter)}
           >
             <i className="fa fa-plus-circle" aria-hidden="true" />
           </button>
           <button
+            data-testid="decrement-button"
             className="btn btn-info m-2"
             onClick={() => onDecrement(counter)}
             disabled={counter.value === 0 ? 'disabled' : ''}
@@ -38,6 +40,7 @@ const Counter = (props) => {
             <i className="fa fa-minus-circle" aria-hidden="true" />
           </button>
           <button
+            data-testid="delete-button"
             className="btn btn-danger"
             onClick={() => onDelete(counter.id)}
           >
