@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Counter from '../counter';
 
 describe('Testing Counter() Component', () => {
@@ -49,5 +49,25 @@ describe('Testing Counter() Component', () => {
     expect(screen.getByTestId('decrement-button')).not.toHaveAttribute(
       'disabled'
     );
+  });
+
+  it('should click', () => {
+    render(
+      <Counter
+        counter={counter}
+        onIncrement={onIncrement}
+        onDecrement={onDecrement}
+        onDelete={onDelete}
+      />
+    );
+    const toIncrementClick = screen.getByTestId('increment-button');
+    const toDecrementClick = screen.getByTestId('decrement-button');
+    const toDeleteClick = screen.getByTestId('delete-button');
+    fireEvent.click(toDecrementClick);
+    fireEvent.click(toIncrementClick);
+    fireEvent.click(toDeleteClick);
+    expect(onIncrement).toBeCalled();
+    expect(onDecrement).toBeCalled();
+    expect(onDelete).toBeCalled();
   });
 });
