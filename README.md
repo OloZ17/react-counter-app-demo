@@ -1,5 +1,8 @@
 # A simple counter-App using [React.js](https://reactjs.org)
 
+[![Build Status](https://app.travis-ci.com/OloZ17/react-context-demo.svg?branch=main)](https://app.travis-ci.com/OloZ17/react-context-demo)
+[![Coverage Status](https://coveralls.io/repos/github/OloZ17/react-counter-app-demo/badge.svg?branch=main)](https://coveralls.io/github/OloZ17/react-counter-app-demo?branch=main)
+
 Based on https://github.com/arnab-datta/counter-app but in a modern way ;)
 
 > **This tiny application is like adding,removing,deleting, resetting products which reflects in the total number of products into our shopping cart.**
