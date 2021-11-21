@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './counter';
+import Counter from './Counter';
 import { func, array } from 'prop-types';
 
 const Counters = (props) => {
@@ -10,6 +10,7 @@ const Counters = (props) => {
       <div className="row justify-content-center">
         <div className="col-4 text-center">
           <button
+            data-testid="reset-button"
             className="btn btn-success m-2"
             onClick={onReset}
             disabled={counters.length === 0 ? 'disabled' : ''}
@@ -17,6 +18,7 @@ const Counters = (props) => {
             <i className="fa fa-refresh" aria-hidden="true" />
           </button>
           <button
+            data-testid="restart-button"
             className="btn btn-primary m-2"
             onClick={onRestart}
             disabled={counters.length !== 0 ? 'disabled' : ''}

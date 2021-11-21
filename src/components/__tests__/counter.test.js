@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Counter from '../counter';
+import Counter from '../Counter';
 
 describe('Testing Counter() Component', () => {
   const counter = { id: 1, value: 0 };
