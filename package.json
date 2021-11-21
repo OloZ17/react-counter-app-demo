@@ -17,8 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false && react-scripts build",
-    "test": "CI=true && react-scripts test setupFile ./src/setupTests.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test setupFile ./src/setupTests.js",
     "eject": "react-scripts eject",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
