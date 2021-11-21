@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NavBar from './components/Navbar';
-import Counters from './components/Counters';
+import NavBar from './components/navbar';
+import Counters from './components/counters';
 
 const App = () => {
   const initialState = [
