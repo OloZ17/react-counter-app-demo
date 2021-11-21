@@ -7,7 +7,7 @@ cache:
   directories:
     - node_modules
 script:
-  - CI=true yarn test __tests__ --watchAll=false --coverage
+  - CI=true yarn test __tests__ -u --watchAll=false --coverage
   - yarn build
 
 after_script:
