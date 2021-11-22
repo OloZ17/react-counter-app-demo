@@ -23,6 +23,7 @@ exports[`Testing App() Component should take a snapshot 1`] = `
             />
             <span
               class="badge badge-pill bg-info m-2"
+              data-testid="total-counters"
               style="width: 50px; font-size: 24px;"
             >
               0
@@ -71,6 +72,7 @@ exports[`Testing App() Component should take a snapshot 1`] = `
               >
                 <span
                   class="badge m-2 bg-warning"
+                  data-testid="total-counter"
                   style="font-size: 21px; padding: 9px; vertical-align: middle;"
                 >
                   Zero
@@ -117,6 +119,7 @@ exports[`Testing App() Component should take a snapshot 1`] = `
               >
                 <span
                   class="badge m-2 bg-warning"
+                  data-testid="total-counter"
                   style="font-size: 21px; padding: 9px; vertical-align: middle;"
                 >
                   Zero
@@ -163,6 +166,7 @@ exports[`Testing App() Component should take a snapshot 1`] = `
               >
                 <span
                   class="badge m-2 bg-warning"
+                  data-testid="total-counter"
                   style="font-size: 21px; padding: 9px; vertical-align: middle;"
                 >
                   Zero
@@ -209,6 +213,7 @@ exports[`Testing App() Component should take a snapshot 1`] = `
               >
                 <span
                   class="badge m-2 bg-warning"
+                  data-testid="total-counter"
                   style="font-size: 21px; padding: 9px; vertical-align: middle;"
                 >
                   Zero

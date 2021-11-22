@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Counter from '../counter';
+import Counter from '../Counter';
 
 describe('Testing Counter() Component', () => {
   const counter = { id: 1, value: 0 };
@@ -30,8 +30,10 @@ describe('Testing Counter() Component', () => {
         onDelete={onDelete}
       />
     );
-    expect(screen.getByText('Zero')).toBeInTheDocument();
-    expect(screen.getByText('Zero')).toHaveClass('badge m-2 bg-warning');
+    expect(screen.getByTestId('total-counter')).toHaveTextContent('Zero');
+    expect(screen.getByTestId('total-counter')).toHaveClass(
+      'badge m-2 bg-warning'
+    );
     expect(screen.getByTestId('decrement-button')).toHaveAttribute('disabled');
   });
   it('should render formatCount 1 with right primary class', () => {
@@ -44,8 +46,10 @@ describe('Testing Counter() Component', () => {
         onDelete={onDelete}
       />
     );
-    expect(screen.getByText('1')).toBeInTheDocument();
-    expect(screen.getByText('1')).toHaveClass('badge m-2 bg-primary');
+    expect(screen.getByTestId('total-counter')).toHaveTextContent('1');
+    expect(screen.getByTestId('total-counter')).toHaveClass(
+      'badge m-2 bg-primary'
+    );
     expect(screen.getByTestId('decrement-button')).not.toHaveAttribute(
       'disabled'
     );

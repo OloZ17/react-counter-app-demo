@@ -14,6 +14,7 @@ exports[`Testing Navbar() Component should take a snapshot 1`] = `
       />
       <span
         class="badge badge-pill bg-info m-2"
+        data-testid="total-counters"
         style="width: 50px; font-size: 24px;"
       >
         10

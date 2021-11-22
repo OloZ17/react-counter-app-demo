@@ -19,6 +19,7 @@ const Counter = (props) => {
       <div className="row justify-content-center">
         <div className="col-4 text-center">
           <span
+            data-testid="total-counter"
             style={{ fontSize: 21, padding: 9, verticalAlign: 'middle' }}
             className={getBadgeClasses()}
           >

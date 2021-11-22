@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from './counter';
+import Counter from './Counter';
 import { func, array } from 'prop-types';
 
 const Counters = (props) => {

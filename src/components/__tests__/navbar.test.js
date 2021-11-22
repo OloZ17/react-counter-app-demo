@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import NavBar from '../navbar';
+import NavBar from '../Navbar';
 
 describe('Testing Navbar() Component', () => {
   const totalCounters = 10;
@@ -12,7 +12,6 @@ describe('Testing Navbar() Component', () => {
 
   it('should render totalCounters', () => {
     render(<NavBar totalCounters={totalCounters} />);
-    expect(screen.getByText(`${totalCounters}`)).toBeInTheDocument();
-    expect(screen.getByText(10)).toBeInTheDocument();
+    expect(screen.getByTestId('total-counters')).toHaveTextContent('10');
   });
 });
