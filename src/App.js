@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './components/Navbar';
 import Counters from './components/Counters';
-import { object } from 'prop-types';
+import { array } from 'prop-types';
 
 const App = (props) => {
   const { state } = props;
@@ -68,7 +68,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  state: object,
+  state: array,
 };
 
 export default App;
