@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,9 +25,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: yarn --frozen-lockfile
-      - run: yarn build --if-present
-      - run: CI=true yarn test __tests__ -u --watchAll=false --coverage
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: CI=true npm test __tests__ -u --watchAll=false --coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
