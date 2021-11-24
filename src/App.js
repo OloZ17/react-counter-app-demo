@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import NavBar from './components/Navbar';
 import Counters from './components/Counters';
+import { object } from 'prop-types';
 
-const App = () => {
+const App = (props) => {
+  const { state } = props;
+
   const initialState = [
     { id: 1, value: 0 },
     { id: 2, value: 0 },
@@ -10,7 +13,9 @@ const App = () => {
     { id: 4, value: 0 },
   ];
 
-  const [counters, setCounters] = useState(initialState);
+  const [counters, setCounters] = state
+    ? useState(state)
+    : useState(initialState);
 
   const handleIncrement = (counter) => {
     const newCounters = [...counters];
@@ -60,6 +65,10 @@ const App = () => {
       </main>
     </div>
   );
+};
+
+App.propTypes = {
+  state: object,
 };
 
 export default App;
