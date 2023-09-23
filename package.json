@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-testing-library": "6.0.1"
+    "eslint-plugin-testing-library": "6.0.2"
   },
   "jest": {
     "collectCoverageFrom": [
