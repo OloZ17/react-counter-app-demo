@@ -1,18 +1,25 @@
-import React from 'react';
-import { func, shape, number } from 'prop-types';
+import React from 'react'
+import { Counter as CounterType } from '../App'
 
-const Counter = (props) => {
-  const { counter, onIncrement, onDecrement, onDelete } = props;
+interface CounterProps {
+  counter: CounterType
+  onIncrement: (counter: CounterType) => void
+  onDecrement: (counter: CounterType) => void
+  onDelete: (counterId: number) => void
+}
+
+const Counter: React.FC<CounterProps> = (props) => {
+  const { counter, onIncrement, onDecrement, onDelete } = props
 
   const getBadgeClasses = () => {
-    let classes = 'badge m-2 bg-';
-    classes += counter.value === 0 ? 'warning' : 'primary';
-    return classes;
-  };
+    let classes = 'badge m-2 bg-'
+    classes += counter.value === 0 ? 'warning' : 'primary'
+    return classes
+  }
 
   const formatCount = () => {
-    return counter.value === 0 ? 'Zero' : counter.value;
-  };
+    return counter.value === 0 ? 'Zero' : counter.value
+  }
 
   return (
     <div className="container">
@@ -36,7 +43,7 @@ const Counter = (props) => {
             data-testid="decrement-button"
             className="btn btn-info m-2"
             onClick={() => onDecrement(counter)}
-            disabled={counter.value === 0 ? 'disabled' : ''}
+            disabled={counter.value === 0}
           >
             <i className="fa fa-minus-circle" aria-hidden="true" />
           </button>
@@ -50,17 +57,7 @@ const Counter = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-Counter.propTypes = {
-  onIncrement: func,
-  onDecrement: func,
-  onDelete: func,
-  counter: shape({
-    id: number,
-    value: number,
-  }),
-};
-
-export default Counter;
+export default Counter

@@ -1,7 +1,10 @@
-import React from 'react';
-import { number } from 'prop-types';
+import React from 'react'
 
-const NavBar = ({ totalCounters }) => {
+interface NavBarProps {
+  totalCounters: number
+}
+
+const NavBar: React.FC<NavBarProps> = ({ totalCounters }) => {
   return (
     <nav className="navbar navbar-light">
       <div className="navbar-brand">
@@ -16,11 +19,7 @@ const NavBar = ({ totalCounters }) => {
         Items
       </div>
     </nav>
-  );
-};
+  )
+}
 
-NavBar.propTypes = {
-  totalCounters: number,
-};
-
-export default NavBar;
+export default NavBar

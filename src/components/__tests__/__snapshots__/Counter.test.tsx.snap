@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Testing Counter() Component > should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="row justify-content-center"
+    >
+      <div
+        class="col-4 text-center"
+      >
+        <span
+          class="badge m-2 bg-warning"
+          data-testid="total-counter"
+          style="font-size: 21px; padding: 9px; vertical-align: middle;"
+        >
+          Zero
+        </span>
+        <button
+          class="btn btn-secondary"
+          data-testid="increment-button"
+        >
+          <i
+            aria-hidden="true"
+            class="fa fa-plus-circle"
+          />
+        </button>
+        <button
+          class="btn btn-info m-2"
+          data-testid="decrement-button"
+          disabled=""
+        >
+          <i
+            aria-hidden="true"
+            class="fa fa-minus-circle"
+          />
+        </button>
+        <button
+          class="btn btn-danger"
+          data-testid="delete-button"
+        >
+          <i
+            aria-hidden="true"
+            class="fa fa-trash-o"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

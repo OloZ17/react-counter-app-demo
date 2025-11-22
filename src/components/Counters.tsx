@@ -1,10 +1,19 @@
-import React from 'react';
-import Counter from './Counter';
-import { func, array } from 'prop-types';
+import React from 'react'
+import Counter from './Counter'
+import { Counter as CounterType } from '../App'
 
-const Counters = (props) => {
+interface CountersProps {
+  counters: CounterType[]
+  onReset: () => void
+  onIncrement: (counter: CounterType) => void
+  onDecrement: (counter: CounterType) => void
+  onDelete: (counterId: number) => void
+  onRestart: () => void
+}
+
+const Counters: React.FC<CountersProps> = (props) => {
   const { counters, onReset, onIncrement, onDelete, onDecrement, onRestart } =
-    props;
+    props
   return (
     <div className="container">
       <div className="row justify-content-center">
@@ -13,7 +22,7 @@ const Counters = (props) => {
             data-testid="reset-button"
             className="btn btn-success m-2"
             onClick={onReset}
-            disabled={counters.length === 0 ? 'disabled' : ''}
+            disabled={counters.length === 0}
           >
             <i className="fa fa-refresh" aria-hidden="true" />
           </button>
@@ -21,7 +30,7 @@ const Counters = (props) => {
             data-testid="restart-button"
             className="btn btn-primary m-2"
             onClick={onRestart}
-            disabled={counters.length !== 0 ? 'disabled' : ''}
+            disabled={counters.length !== 0}
           >
             <i className="fa fa-recycle" aria-hidden="true" />
           </button>
@@ -37,16 +46,7 @@ const Counters = (props) => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-Counters.propTypes = {
-  onIncrement: func,
-  onDecrement: func,
-  onReset: func,
-  onDelete: func,
-  onRestart: func,
-  counters: array,
-};
-
-export default Counters;
+export default Counters
