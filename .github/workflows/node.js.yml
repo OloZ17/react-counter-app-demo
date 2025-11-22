@@ -24,10 +24,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "yarn"
-      - run: yarn --frozen-lockfile
-      - run: yarn build --if-present
-      - run: CI=true yarn test __tests__ -u --watchAll=false --coverage
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:coverage -- --run
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
